@@ -3,9 +3,14 @@ window.onload = function () {
     var logInBtn = document.getElementById("logInBtn");
     var logInDivBackground = document.getElementById("logInDivBackground");
 
-    logInBtn.onclick = function () {
-        logInArea.style.display = "unset";
-    };
+    logInBtn.onmousedown = function () {
+        logInBtn.style.backgroundColor = "#000000";
+        logInBtn.style.boxShadow = "none";
+    }
+
+    // logInBtn.onclick = function () {
+    //     logInArea.style.display = "unset";
+    // };
     logInDivBackground.onclick = function () {
         logInArea.style.display = "none";
     };
