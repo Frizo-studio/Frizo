@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FreePost</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -15,10 +14,10 @@
 <body>
     <div id="top">
         <div id="logo">
-            <img src="resource/icon/messages.png" alt="" class="imgFullSize">
+            <img src="resource/icon/bell.svg" alt="" class="imgFullSize">
         </div>
         <div id="navbarSearchGroup">
-            <input type="text" id="navbarSearchInput" placeholder="search..">
+            <input type="text" id="navbarSearchInput" placeholder="搜尋..">
             <div id="navbarSearchBtn">
                 +
             </div>
@@ -27,27 +26,43 @@
             <div id="postBtn">
                 Post
             </div>
-            <img src="resource/icon/bell.png" alt="通知" class="imgFullSize functionBtnSize functionBtn">
-            <img src="resource/icon/addfriend.png" alt="新增朋友" class="imgFullSize functionBtnSize functionBtn">
-            <img src="resource/icon/messages.png" alt="訊息" class="imgFullSize functionBtnSize functionBtn">
+            <img src="resource/icon/bell.svg" alt="通知" class="imgFullSize functionBtnSize functionBtn">
+            <img src="resource/icon/addfriend.svg" alt="新增朋友" class="imgFullSize functionBtnSize functionBtn">
+            <img src="resource/icon/messages.svg" alt="訊息" class="imgFullSize functionBtnSize functionBtn">
         </div>
         <div id="userLogIn">
-            <div id="logInBtn">登入/註冊</div>
+            <button type="button" id="logInBtn" class="btn btn-primary mylogin" data-toggle="modal"
+                data-target="#logInDiv">登入/註冊</button>
         </div>
     </div>
 
-    <div id="logInArea">
-        <div id="logInDivBackground"></div>
-        <div id="logInDiv">
-            <div class="centerPadding">
-                <h4>歡迎回到Frizo.</h4>
-                <h5>登入帳號開始享受Frizo吧</h5>
-                <div id="logInWay">
-                    <button type="button" class="btn btn-outline-secondary">Google 登入</button><br>
-                    <button type="button" class="btn btn-outline-secondary">Facebook 登入</button><br>
-                    <button type="button" class="btn btn-outline-secondary">E-mail 登入</button>
+    <div class="modal fade" id="logInDiv" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body logInDivBackgroundImg">
+                    <h4>歡迎回到Frizo.</h4>
+                    <h5>登入帳號開始享受Frizo吧</h5>
+                    <div class="input-group input-group-sm logInDivPading mb-3 mt-4">
+                        <input type="text" class="form-control" placeholder="輸入您的帳號"
+                            aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="input-group input-group-sm logInDivPading mb-3">
+                        <input type="password" class="form-control" placeholder="輸入您的密碼"
+                            aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="centerPadding">
+                        <button type="button" class="btn btn-link" id="dataConfirm">登入</button>
+                    </div>
+                    <h6>其他登入方式</h6>
+                    <div class="centerPadding">
+                        <div id="logInWay">
+                            <button type="button" class="btn btn-outline-secondary">Google 登入</button><br>
+                            <button type="button" class="btn btn-outline-secondary">Facebook 登入</button><br>
+                            <button type="button" class="btn btn-outline-secondary">E-mail 登入</button>
+                        </div>
+                    </div>
+                    <h6>沒有帳號嗎? <span><a href="#">註冊</a></span></h6>
                 </div>
-                <h6>沒有帳號嗎? <span><a href="#">註冊</a></span></h5>
             </div>
         </div>
     </div>
@@ -71,24 +86,18 @@
             test test test test test test test test test test test test test test test test test test
         </div>
         <div id="friendsBox">
+            <div id="userFriend">
 
+            </div>
+            <div class="row align-items-end">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="searchFriend" aria-describedby="searchFriend">
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="foot"></div>
-    <!-- 
-    <script>
-        var logInBtn = document.getElementById("logInBtn");
-        var logInArea = document.getElementById("logInArea");
-        var logInDivBackground = document.getElementById("logInDivBackground");
-
-        logInBtn.onclick = function () {
-            logInArea.style.display = "unset";
-        }
-        logInDivBackground.onclick = function () {
-            logInArea.style.display = "none";
-        }
-    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -96,9 +105,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

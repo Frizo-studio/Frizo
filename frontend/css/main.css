@@ -22,9 +22,7 @@ body{
     top: 10px;
     height: 30px;
     width: 30px;
-    background-color: burlywood;
-}
-#navbarSearchGroup{
+}#navbarSearchGroup{
     position: absolute;
     left: 14%;
     width: 31.5%;
@@ -44,11 +42,20 @@ body{
     left: 87.5%;
     top: 5px;
     height: 40px;
-    width: 80px;
+    width: 100px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mylogin{
+    background-color: #000000;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.mylogin:hover{
+    background-color: #000000;
 }
 .imgFullSize{
     height: 100%;
@@ -90,7 +97,7 @@ body{
     width: 88%;
     border: 1px solid #000000;
     background-color: #ffffff;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 8px 0px 0px 8px;
     border-right-style: unset;
     float: left;
     padding-left: 2%;
@@ -99,12 +106,12 @@ body{
 #navbarSearchBtn{
     position: absolute;
     top: 1px;
-    height: 27px;
-    left: 90%;
+    height: 25px;
+    left: 88%;
     width: 10%;
     border: 1px solid #000000;
     background-color: #ffffff;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 8px 8px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,33 +162,29 @@ body{
     border: 1px solid #707070;
 }
 #friendsBox{
-    position: absolute;
-    top: -50px;
+    position: fixed;
+    top: 50px;
     right: 0px;
     height: 100vh;
     width: 224px;
     background-color: #DBDBDB;
 }
-#logInDivBackground{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 1;
-    opacity:0.7;
+#searchFriend{
+    position: relative;
+    bottom: 1px;
+    width: 100%;
+    height: 65px;
+    background-color: #090909;
+}
+.widthFull{
+    width: 100%;
 }
 #logInDiv{
-    position: fixed;
-    top: 100px;
-    left: 25vw;
-    margin: auto;
-    padding-top: 40px;
-    width: 50vw;
-    height: 450px;
+    top: 40px;
+}
+.logInDivBackgroundImg{
     background-image: url("../resource/img/signinupBack.png");
     background-size: cover;
-    opacity:1.0;
-    z-index: 1;
 }
 .centerPadding{
     position: relative;
@@ -192,26 +195,35 @@ body{
 #logInDiv h4{
     font: Regular 28px/37px Malgun Gothic;
     letter-spacing: 0;
+    text-align: center;
 }
 #logInDiv h5{
     font: Regular 20px/27px Malgun Gothic;
     letter-spacing: 0;
     color: #787878;
+    text-align: center;
 }
 #logInDiv h6{
     font: Regular 20px/27px Malgun Gothic;
     letter-spacing: 0;
     color: #171717;
     margin-top: 20px;
+    text-align: center;
 }
 #logInWay{
     width: 260px;
+}
+.logInDivPading{
+    position: relative;
+    margin: auto;
+    width: 350px;
 }
 #logInWay button{
     position: relative;
     width: 220px;
     left: 20px;
-    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 5px;
     border: 1px solid #707070;
     color: #090909;
 }
