@@ -61,6 +61,11 @@ body{
     height: 100%;
     width: 100%;
 }
+.SearchIconCenter{
+    position: relative;
+    left: 11px;
+    top: 5px;
+}
 .imgBorderRadius{
     border-radius: 20px;
     border: 1px #ffffff solid;
@@ -190,6 +195,9 @@ body{
     border-top: 1px solid #707070;
     border-left: none;
 }
+#searchFriend:focus{
+    outline: none;
+}
 .widthFull{
     width: 100%;
 }
@@ -231,6 +239,12 @@ body{
     position: relative;
     margin: auto;
     width: 350px;
+}
+.inputBorder{
+    border: 1px #747474 solid;
+}
+.textLetterSpacing{
+    letter-spacing:1px;
 }
 #logInWay button{
     position: relative;
@@ -309,11 +323,27 @@ body{
 .groupText{
     font-size: 12px;
     padding: 3px 0 0 10px;
+    margin-bottom: 3px;
     color: #444444;
-    margin-bottom: 200px;
 }
 .friendText{
     font-size: 12px;
     padding: 3px 0 0 10px;
+    margin-bottom: 3px;
     color: #444444;
+}
+.groupContainer{
+    position: relative;
+    height: 200px;
+    background-color: #0077FF;
+}
+.friendContainer{
+    position: relative;
+    height: 290px;
+    background-color: #0077FF;
+}
+.friendsBtn{
+    position: relative;
+    height: 30px;
+    width: 100%;
 }
