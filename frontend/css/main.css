@@ -22,7 +22,8 @@ body{
     top: 10px;
     height: 30px;
     width: 30px;
-}#navbarSearchGroup{
+}
+#navbarSearchGroup{
     position: absolute;
     left: 14%;
     width: 31.5%;
