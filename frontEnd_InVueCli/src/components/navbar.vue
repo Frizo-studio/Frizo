@@ -56,14 +56,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'Navbar'
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-* {
-  font-family: Malgun Gothic;
-}
 .myLogin {
   background-color: #000000;
   color: #ffffff;
